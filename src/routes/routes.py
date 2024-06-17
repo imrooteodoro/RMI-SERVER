@@ -21,7 +21,7 @@ def setup_routes(app):
          arquivo = request.files['conteudo_arquivo']
          nome_arquivo = secure_filename(arquivo.filename)
          conteudo_arquivo = arquivo.read()
-         servidor.enviar_arquivo(conteudo_arquivo)
+         servidor.enviar_arquivo(nome_arquivo, conteudo_arquivo)
          return "Arquivo enviado com sucesso!"
 
     @app.route('/delete', methods=['POST'])
