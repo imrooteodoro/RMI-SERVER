@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidor RMI</title>
+</head>
+<body>
+
+    <h1>Arquivos:</h1>
+    <ul>
+        {% for nome_arquivo, link_download in arquivos.items() %}
+    <p>
+        {{ nome_arquivo }} - 
+        <a href="{{ link_download }}">Baixar</a> - 
+        <form action="/delete" method="post" style="display:inline;">
+            <input type="hidden" name="nome_arquivo" value="{{ nome_arquivo }}">
+            <input type="submit" value="Excluir">
+        </form>
+    </p>
+{% endfor %}
+    </ul>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="conteudo_arquivo">
+        <input type="submit" value="Upload">
+    </form>
+    
+</body>
+</html>
