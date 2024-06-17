@@ -1,5 +1,6 @@
 from flask import request, render_template, url_for, send_file, session, redirect
 from models.models import get_servidor
+from werkzeug.utils import secure_filename
 import os
 
 def setup_routes(app):
@@ -16,11 +17,12 @@ def setup_routes(app):
 
     @app.route('/upload', methods=['POST'])
     def enviar_arquivo():
-        servidor = get_servidor()
-        nome_arquivo = request.form['nome_arquivo']
-        conteudo_arquivo = request.files['conteudo_arquivo'].read()
-        servidor.enviar_arquivo(nome_arquivo, conteudo_arquivo)
-        return "Arquivo enviado com sucesso!"
+         servidor = get_servidor()
+         arquivo = request.files['conteudo_arquivo']
+         nome_arquivo = secure_filename(arquivo.filename)
+         conteudo_arquivo = arquivo.read()
+         servidor.enviar_arquivo(conteudo_arquivo)
+         return "Arquivo enviado com sucesso!"
 
     @app.route('/delete', methods=['POST'])
     def excluir_arquivo():
