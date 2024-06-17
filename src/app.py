@@ -1,7 +1,7 @@
 from flask import Flask
 from routes.routes import setup_routes
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='public')
 app.secret_key = '3333' 
 
 setup_routes(app)
