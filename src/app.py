@@ -1,7 +1,6 @@
 from flask import Flask, request
 from routes import pyroRoute
 from models import pyro5
-from controllers import pyroControl
 
 
 
