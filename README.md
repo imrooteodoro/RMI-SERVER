@@ -19,7 +19,7 @@ Clone este repositório, veja se há em seu computador todos os itens listados n
 ##### :exclamation:Importante *copie a uri gerada*
 
 ---
-Parte 2:
+##### Parte 2:
 Entre  na pasta `src` e execute o arquivo `app.py` com as mesmas orientações anteriores, visite a url gerada e faça login na interface passando a uri gerada pelo servidor; após logar, o usuário terá opções de download, upload, deleção e visualização de arquivos.
 ----
 ## </> Desenvolvedor 
