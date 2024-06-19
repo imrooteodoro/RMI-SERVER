@@ -1,15 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styles/main.css">
+    <link rel="stylesheet" href="/public/styles/login.css">
     <title>RMI Login</title>
 </head>
 <body>
-    <form action="/login" method="post">
-        <label for="uri">URI:</label><br>
-        <input type="text" id="uri" name="uri" required><br>
-        <input type="submit" value="Login">
-    </form>
+    <div class="uri-form">
+
+    <h2 style="text-align: center; margin-top:2em;">RMI USER ÁREA</h2>
+    <div class="login">
+        <form action="/" method="post">
+            <label for="uri"></label><br>
+            <input type="text" placeholder="Insira sua URI aqui" id="uri" name="uri" required ><br>
+            <button type="submit" value="Login">Login</button>
+        </form>
+    </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="text-span">
+                <p>Developed By Teodoro, 2024</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
