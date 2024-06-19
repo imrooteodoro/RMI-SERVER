@@ -1,0 +1,69 @@
+#header{
+    background-color: black;
+    width: 100%;
+    height:90px;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    color: white;
+    margin-bottom:2em;
+}
+
+nav{
+    padding: 2em;
+    
+}
+
+nav a{
+    text-decoration: none;
+    color:green;
+    text-transform: uppercase;
+}
+.server{
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    background: rgba(144, 133, 133, 0.333);
+    width: 85%;
+    overflow: scroll;
+    height:400px;
+    box-shadow: 4px 5px 6px rgb(29, 127, 45);
+}
+.files{
+   display: flex;
+   text-align: center;
+   color:green
+}
+
+.files p{
+    background-color: black;
+}
+
+button{
+    color: white;
+    background-color: red;
+    border: none;
+    display: inline-block;
+    padding: 10px;
+    border-radius:5px;
+}
+
+a{
+     text-decoration: none;
+     
+}
+
+.fileup{
+    display: flex;
+    margin:auto;
+    background-color: black;
+}
+.form{
+    margin: auto;
+}
+
+.choose{
+    background-color: green;
+    color: wheat;
+}
