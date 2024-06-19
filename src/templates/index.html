@@ -4,26 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servidor RMI</title>
+    <link rel="stylesheet" href="/public/styles/main.css">
+    <link rel="stylesheet" href="/public/styles/server.css">
 </head>
 <body>
+    <header id="header">
+        <nav>
+            <span>RMI SERVER</span>
+            <a href="/">back to login area</a>
+        </nav>
+    </header>
 
-    <h1>Arquivos:</h1>
+    <div class="server">
+
+        <div class="files">
     <ul>
         {% for nome_arquivo, link_download in arquivos.items() %}
     <p>
         {{ nome_arquivo }} - 
         <a href="{{ link_download }}">Baixar</a> - 
-        <form action="/delete" method="post" style="display:inline;">
+        <form action="/delete" method="post">
             <input type="hidden" name="nome_arquivo" value="{{ nome_arquivo }}">
-            <input type="submit" value="Excluir">
+            <button type="submit" value="Excluir">Excluir</button>
         </form>
     </p>
 {% endfor %}
     </ul>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="text" name="nome_arquivo" placeholder="Digite o nome do arquivo">
-        <input type="file" name="conteudo_arquivo">
-        <input type="submit" value="Upload">
-    </form>
+</div>
+</div>
+    <div class="fileup">
+        <div class="form">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file"  class="choose" name="conteudo_arquivo">
+            <button type="submit" value="Upload">Enviar</button>
+        </form>
+    </div>
+    </div>
 </body>
 </html>
