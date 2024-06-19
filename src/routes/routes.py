@@ -4,9 +4,6 @@ from werkzeug.utils import secure_filename
 import os
 
 def setup_routes(app):
-    @app.route('/')
-    def home():
-        return render_template('index.html')
 
     @app.route('/files', methods=['GET'])
     def listar_arquivos():
@@ -42,7 +39,7 @@ def setup_routes(app):
         else:
             return "Arquivo não encontrado!", 404
 
-    @app.route('/login', methods=['GET', 'POST'])
+    @app.route('/', methods=['GET', 'POST'])
     def login():
         if request.method == 'POST':
             session['uri'] = request.form['uri']
