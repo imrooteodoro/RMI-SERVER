@@ -20,7 +20,7 @@ def main():
     # Delay to allow container network setup
     time.sleep(5)
 
-    servidor = Servidor('/app/server/arquivos')
+    servidor = Servidor('/home/teodoro/Documents/Sistemas Distribuidos/RMI-SERVER/RMI-SERVER/server/arquivos')
     daemon = Pyro5.api.Daemon(host=get_private_ip_address())                
     uri = daemon.register(servidor, objectId="obj_188645a453a54bbc81948816e3d3edba")   
     print("Pronto. O URI do objeto é: {0}".format(uri))
