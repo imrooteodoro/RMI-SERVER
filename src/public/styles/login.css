@@ -1,0 +1,30 @@
+.footer{
+    display: flex;
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    margin-top: 5em;
+    height:150px;
+}
+
+.text-span{
+    margin: auto;
+}
+
+body{
+    background:rgb(32, 25, 25);
+
+}
+button{
+    margin-top: 4px;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 3px 4px;
+    border: none;
+    font-size:20px;
+}
+
+.uri-form{
+    color: wheat;
+}
